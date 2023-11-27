@@ -31,3 +31,14 @@ a:visited {
   color: currentColor;
   text-decoration: none;
 }
+
+.button {
+  padding: 2.1rem 3.5rem; 
+  font-weight: 500;
+  background-color: $color-button;
+  border: none;
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+
+}
