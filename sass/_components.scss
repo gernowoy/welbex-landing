@@ -1,0 +1,61 @@
+// HEADER
+
+.header {
+  display: flex;
+  justify-content: space-around;
+
+
+  .logo {
+    width: 14rem;
+    margin-right: 5.2rem;
+
+    &__icon {
+      margin-bottom: 0.8rem;
+
+      img {
+        min-width: 100%;
+      }
+    }
+
+    &__title {
+      font-size: 1rem;
+      font-family: $font-secondary;
+      font-weight: 300;
+    }
+  }
+
+  .nav {
+
+    padding-top: 0.4rem;
+
+    &__list {
+      margin-right: 13.7rem;
+      display: flex;
+      gap: 3rem;
+      list-style: none;
+    }
+
+    &__item {
+      font-weight: 500;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+  }
+
+  &__phone {
+    flex-shrink: 0;
+    margin-right: 4.7rem;
+    padding-top: 0.4rem;
+    font-weight: 500;
+
+  }
+
+  &__socials {
+    padding-top: 0.4rem;
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+  }
+}
