@@ -5,9 +5,22 @@
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 56.25em) {
+    margin-bottom: 5rem;
+  }
+
+  @media screen and (max-width: 40em) {
+    margin-bottom: 0;
+    justify-content: center;
+  }
+
   .logo {
     width: 14rem;
     margin-right: 5.2rem;
+
+    @media screen and (max-width: 40em) {
+      display: none;
+    }
 
     &__icon {
       margin-bottom: 0.8rem;
@@ -26,21 +39,58 @@
 
   .nav {
     padding-top: 0.4rem;
+    flex-grow: 1;
+
+    @media screen and (max-width: 75em) {
+      flex-grow: 0;
+    }
+
+    @media screen and (max-width: 40em) {
+      padding-top: unset;
+    }
 
     &__list {
-      margin-right: 13.7rem;
       display: flex;
       gap: 3rem;
       list-style: none;
+
+      @media screen and (max-width: 40em) {
+        gap: 0;
+      }
+
+      & li:last-child {
+        @media screen and (max-width: 56.25em) {
+          display: none;
+        }
+      }
     }
 
     &__item {
       font-weight: 500;
+      @media screen and (max-width: 40em) {
+        text-transform: uppercase;
+        padding: 2rem 0.8rem;
+      }
+
+      @media screen and (max-width: 30em) {
+        font-size: 1.4rem;
+      }
+      @media screen and (max-width: 22.5em) {
+        font-size: 1.2rem;
+      }
     }
   }
 
   &__contacts {
     display: flex;
+
+    @media screen and (max-width: 85em) {
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: 75em) {
+      display: none;
+    }
   }
 
   &__phone {
@@ -48,6 +98,9 @@
     margin-right: 4.7rem;
     padding-top: 0.4rem;
     font-weight: 500;
+    @media screen and (max-width: 85em) {
+      margin-right: unset;
+    }
   }
 
   &__socials {
@@ -55,6 +108,9 @@
     display: flex;
     gap: 3rem;
     list-style: none;
+    @media screen and (max-width: 85em) {
+      justify-content: flex-end;
+    }
   }
 }
 
@@ -66,13 +122,37 @@
   display: flex;
   justify-content: space-between;
 
+  @media screen and (max-width: 56.25em) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 40em) {
+    margin-bottom: 6rem;
+    padding-top: 4rem;
+  }
+
+
   &-box-title {
     flex-basis: 40rem;
+
+    @media screen and (max-width: 56.25em) {
+      flex-basis: unset;
+      max-width: 40rem;
+    }
+    @media screen and (max-width: 40em) {
+      max-width: 30rem;
+    }
 
     &__heading {
       margin-bottom: 3rem;
       font-size: 4.8rem;
       font-weight: 400;
+
+      @media screen and (max-width: 40em) {
+        margin-bottom: 1.5rem;
+        font-size: 3.6rem;
+      }
+
       span {
         font-weight: 900;
         background-image: linear-gradient(
@@ -94,10 +174,26 @@
     text-align: end;
     padding-top: 1.5rem;
 
+    @media screen and (max-width: 56.25em) {
+      flex-basis: unset;
+      max-width: 40rem;
+      padding-top: 4.5rem;
+      align-self: flex-end;
+    }
+
+    @media screen and (max-width: 30em) {
+      text-align: unset;
+    }
+
     &__heading {
       margin-bottom: 4rem;
       font-size: 1.8rem;
       font-weight: 500;
+
+      @media screen and (max-width: 40em) {
+        margin-bottom: 2rem;
+      }
+
       span {
         letter-spacing: 0.09rem;
         text-transform: uppercase;
@@ -107,6 +203,9 @@
           rgb(252, 176, 69),
           rgb(253, 29, 29)
         );
+        @media screen and (max-width: 30em) {
+          text-transform: unset;
+        }
       }
     }
 
@@ -116,6 +215,13 @@
       column-gap: 3rem;
       grid-template-columns: 1fr 1fr;
       margin-bottom: 6.2rem;
+
+      @media screen and (max-width: 40em) {
+        gap: 1rem;
+      }
+      @media screen and (max-width: 30em) {
+        display: none;
+      }
     }
 
     &__title {
@@ -128,6 +234,43 @@
 
     &__text {
       font-family: $font-secondary;
+    }
+
+    &__minigrid {
+      display: none;
+      list-style: none;
+
+      @media screen and (max-width: 30em) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        row-gap: 1.4rem;
+
+        &-item {
+          position: relative;
+          padding-left: 1.4rem;
+          text-transform: uppercase;
+          font-family: $font-secondary;
+          letter-spacing: 0.065rem;
+          font-size: 1.3rem;
+        }
+
+        &-item::before {
+          content: "";
+          position: absolute;
+          width: 1rem;
+          height: 0.1rem;
+          top: 0.7rem;
+          left: 0;
+          background: linear-gradient(to right, rgb(252, 176, 69), rgb(253, 29, 29));
+        }
+      }
+    }
+
+    &__button {
+      @media screen and (max-width: 30em) {
+        display: none;
+      }
     }
   }
 
@@ -144,9 +287,29 @@
   display: flex;
   margin-bottom: 3.1rem;
 
+  @media screen and (max-width: 56.25em) {
+    margin-bottom: 5rem;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  @media screen and (max-width: 30em) {
+    padding-top: 4rem;
+  }
+
   &__about {
     margin-right: 9.8rem;
+    @media screen and (max-width: 85em) {
+      margin-right: unset;
+      flex-grow: 1;
+    }
   }
+  &__menu {
+    @media screen and (max-width: 22.5em) {
+      max-width: 12rem;
+    }
+  }
+
+
 
   &__subtitle {
     margin-bottom: 2rem;
@@ -155,6 +318,10 @@
     font-weight: 700;
     font-size: 1.4;
     letter-spacing: 0.07rem;
+
+    @media screen and (max-width: 30em) {
+      font-size: 1.2;
+    }
   }
 
   &__list {
@@ -165,13 +332,23 @@
     flex-wrap: wrap;
     row-gap: 1rem;
     column-gap: 5.2rem;
+    @media screen and (max-width: 85em) {
+      column-gap: 2rem;
+    }
+    @media screen and (max-width: 22.5em) {
+      max-height: 16rem;
+    }
   }
-  
+
   &__contacts {
     text-align: end;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 56.25em) {
+      text-align: unset;
+    }
   }
 
   &__contacts-list {
@@ -180,20 +357,27 @@
     flex-direction: column;
     gap: 2rem;
 
+    @media screen and (max-width: 30em) {
+      gap: 1rem;
+    }
+
     & li:last-child {
       margin-top: -0.6rem;
     }
   }
-  
+
   &__socials {
     list-style: none;
     display: flex;
     justify-content: end;
     align-items: end;
     gap: 1rem;
+
+    @media screen and (max-width: 56.25em) {
+      justify-content: unset;
+    }
   }
 }
-
 
 // COPYRIGHT
 
@@ -202,6 +386,10 @@
   font-family: $font-secondary;
   font-size: 1.2rem;
   text-align: end;
+
+  @media screen and (max-width: 56.25em) {
+    text-align: unset;
+  }
 
   p {
     margin-bottom: 0.5rem;
