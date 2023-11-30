@@ -243,6 +243,11 @@ a img:hover {
     padding-top: 4rem;
   }
 }
+@media screen and (max-width: 20em) {
+  .main {
+    padding-top: 4.2rem;
+  }
+}
 .main-box-title {
   flex-basis: 40rem;
 }
@@ -266,6 +271,11 @@ a img:hover {
   .main-box-title__heading {
     margin-bottom: 1.5rem;
     font-size: 3.6rem;
+  }
+}
+@media screen and (max-width: 20em) {
+  .main-box-title__heading {
+    margin-bottom: 1.7rem;
   }
 }
 .main-box-title__heading span {
@@ -302,7 +312,7 @@ a img:hover {
 }
 @media screen and (max-width: 40em) {
   .main-box-description__heading {
-    margin-bottom: 2rem;
+    margin-bottom: 2.2rem;
   }
 }
 .main-box-description__heading span {
@@ -314,6 +324,11 @@ a img:hover {
 @media screen and (max-width: 30em) {
   .main-box-description__heading span {
     text-transform: unset;
+  }
+}
+@media screen and (max-width: 20em) {
+  .main-box-description__heading span {
+    letter-spacing: -0.03rem;
   }
 }
 .main-box-description__container {
@@ -372,6 +387,12 @@ a img:hover {
     background: linear-gradient(to right, rgb(252, 176, 69), rgb(253, 29, 29));
   }
 }
+@media screen and (max-width: 20em) {
+  .main-box-description__minigrid {
+    grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+    column-gap: 1rem;
+  }
+}
 @media screen and (max-width: 30em) {
   .main-box-description__button {
     display: none;
@@ -418,12 +439,14 @@ a img:hover {
   color: #656566;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 1.4;
+  font-size: 1.4rem;
   letter-spacing: 0.07rem;
 }
 @media screen and (max-width: 30em) {
   .footer__subtitle {
-    font-size: 1.2;
+    margin-bottom: 2.1rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.06rem;
   }
 }
 .footer__list {
@@ -443,6 +466,11 @@ a img:hover {
 @media screen and (max-width: 22.5em) {
   .footer__list {
     max-height: 16rem;
+  }
+}
+@media screen and (max-width: 22.5em) {
+  .footer__list {
+    column-gap: 2.7rem;
   }
 }
 .footer__contacts {
@@ -470,6 +498,11 @@ a img:hover {
 .footer__contacts-list li:last-child {
   margin-top: -0.6rem;
 }
+@media screen and (max-width: 20em) {
+  .footer__phone {
+    font-size: 1.6rem;
+  }
+}
 .footer__socials {
   list-style: none;
   display: flex;
@@ -480,6 +513,12 @@ a img:hover {
 @media screen and (max-width: 56.25em) {
   .footer__socials {
     justify-content: unset;
+  }
+}
+@media screen and (max-width: 20em) {
+  .footer__socials {
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 

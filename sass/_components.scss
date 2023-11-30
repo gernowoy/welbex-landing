@@ -131,6 +131,10 @@
     padding-top: 4rem;
   }
 
+  @media screen and (max-width: 20em) {
+    padding-top: 4.2rem;
+  }
+
 
   &-box-title {
     flex-basis: 40rem;
@@ -151,6 +155,10 @@
       @media screen and (max-width: 40em) {
         margin-bottom: 1.5rem;
         font-size: 3.6rem;
+      }
+
+      @media screen and (max-width: 20em) {
+        margin-bottom: 1.7rem;
       }
 
       span {
@@ -191,7 +199,7 @@
       font-weight: 500;
 
       @media screen and (max-width: 40em) {
-        margin-bottom: 2rem;
+        margin-bottom: 2.2rem;
       }
 
       span {
@@ -205,6 +213,9 @@
         );
         @media screen and (max-width: 30em) {
           text-transform: unset;
+        }
+        @media screen and (max-width: 20em) {
+          letter-spacing: -0.03rem;
         }
       }
     }
@@ -265,6 +276,11 @@
           background: linear-gradient(to right, rgb(252, 176, 69), rgb(253, 29, 29));
         }
       }
+
+      @media screen and (max-width: 20em) {
+        grid-template-columns: minmax(min-content, max-content) minmax(min-content, max-content);
+        column-gap: 1rem;
+      }
     }
 
     &__button {
@@ -316,11 +332,13 @@
     color: $color-text-secondary;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1.4;
+    font-size: 1.4rem;
     letter-spacing: 0.07rem;
 
     @media screen and (max-width: 30em) {
-      font-size: 1.2;
+      margin-bottom: 2.1rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.06rem;
     }
   }
 
@@ -337,6 +355,9 @@
     }
     @media screen and (max-width: 22.5em) {
       max-height: 16rem;
+    }
+    @media screen and (max-width: 22.5em) {
+      column-gap: 2.7rem;
     }
   }
 
@@ -366,6 +387,12 @@
     }
   }
 
+  &__phone {
+    @media screen and (max-width: 20em) {
+      font-size: 1.6rem;
+    }
+  }
+
   &__socials {
     list-style: none;
     display: flex;
@@ -375,6 +402,11 @@
 
     @media screen and (max-width: 56.25em) {
       justify-content: unset;
+    }
+
+    @media screen and (max-width: 20em) {
+      gap: 1.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
